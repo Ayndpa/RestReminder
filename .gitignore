@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# NuGet packages and lock artifacts
+packages/
+*.nupkg
+
+# Test and coverage results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db

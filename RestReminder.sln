@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestReminder", "RestReminder.csproj", "{836DC7DB-098F-02E0-9D20-6855D64BF0AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836DC7DB-098F-02E0-9D20-6855D64BF0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836DC7DB-098F-02E0-9D20-6855D64BF0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836DC7DB-098F-02E0-9D20-6855D64BF0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836DC7DB-098F-02E0-9D20-6855D64BF0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F92028A-F460-4718-9D11-CEE03FC44C97}
+	EndGlobalSection
+EndGlobal

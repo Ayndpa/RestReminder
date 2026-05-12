@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="RestReminder.ReminderWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestReminder"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="休息提醒">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid x:Name="RootLayout">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FFF8FAFC" Offset="0" />
+                <GradientStop Color="#FFE2E8F0" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="TitleBarArea" Height="48" Margin="16,12,16,0">
+            <TextBlock
+                Text="休息提醒"
+                VerticalAlignment="Center"
+                FontSize="15"
+                FontWeight="SemiBold" />
+        </Grid>
+
+        <Grid Grid.Row="1" Padding="24,14,24,24">
+            <ScrollViewer
+                HorizontalScrollMode="Disabled"
+                VerticalScrollMode="Auto"
+                VerticalScrollBarVisibility="Auto">
+                <Border
+                    CornerRadius="24"
+                    Padding="24"
+                    Background="#CCFFFFFF"
+                    BorderBrush="#1A000000"
+                    BorderThickness="1">
+                    <Border.Shadow>
+                        <ThemeShadow />
+                    </Border.Shadow>
+
+                    <StackPanel Spacing="16">
+                        <TextBlock
+                            Text="该起来活动一下了"
+                            FontSize="30"
+                            FontWeight="SemiBold"
+                            TextWrapping="Wrap" />
+                        <TextBlock
+                            x:Name="ReminderTimeTextBlock"
+                            FontSize="14"
+                            Opacity="0.78"
+                            Text="提醒时间：-" />
+                        <TextBlock
+                            x:Name="ReminderHintTextBlock"
+                            Text="请离开屏幕，活动肩颈，喝口水再回来继续。"
+                            FontSize="15"
+                            TextWrapping="Wrap" />
+                        <TextBlock
+                            x:Name="BreakElapsedTextBlock"
+                            Text="休息时长：00:00"
+                            FontSize="16"
+                            FontWeight="SemiBold"
+                            Visibility="Collapsed" />
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="12">
+                            <Button x:Name="StartBreakButton" Content="我去休息" Click="StartBreak_Click" />
+                            <Button x:Name="ReturnButton" Content="我回来了" Click="Return_Click" Visibility="Collapsed" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
