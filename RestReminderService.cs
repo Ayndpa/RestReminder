@@ -97,9 +97,9 @@ public sealed partial class RestReminderService : IDisposable
     public void TriggerMessageNotificationNow()
     {
         var reminderTime = DateTimeOffset.Now;
-        StartPersistentNotification(reminderTime, "测试消息通知");
+        ShowPersistentToast(reminderTime, "测试消息通知");
 
-        LastActionText = $"最后动作：已发送闹钟式测试通知（{reminderTime.LocalDateTime:yyyy-MM-dd HH:mm:ss}）";
+        LastActionText = $"最后动作：已发送测试通知（{reminderTime.LocalDateTime:yyyy-MM-dd HH:mm:ss}）";
         RaiseStateChanged();
     }
 
@@ -300,6 +300,11 @@ public sealed partial class RestReminderService : IDisposable
     {
         _timeoutCts?.Cancel();
         StopPersistentNotification();
+        
+        if (_hourlyTimer.IsRunning)
+        {
+            _hourlyTimer.Stop();
+        }
 
         if (_reminderWindow is null)
         {
