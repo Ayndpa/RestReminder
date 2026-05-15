@@ -85,7 +85,7 @@
                         </Grid>
 
                         <StackPanel Orientation="Horizontal" Spacing="12">
-                            <Button Content="测试消息通知" Click="TestMessageNotificationButton_Click" />
+                            <Button Content="立刻触发" Click="TestMessageNotificationButton_Click" />
                             <Button Content="退出应用" Click="ExitButton_Click" />
                         </StackPanel>
 
