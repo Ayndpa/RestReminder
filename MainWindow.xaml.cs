@@ -70,7 +70,6 @@ public sealed partial class MainWindow : Window
     {
         IntervalNumberBox.Value = _reminderService.ReminderInterval.TotalMinutes;
         IntervalText.Text = $"提醒间隔：{_reminderService.ReminderInterval.TotalMinutes:0} 分钟";
-        StatusText.Text = _reminderService.IsRunning ? "运行中" : "未启动";
         NextReminderText.Text = _reminderService.NextReminderAt is DateTimeOffset nextReminder
             ? $"下一次提醒：{nextReminder.LocalDateTime:yyyy-MM-dd HH:mm:ss}"
             : "下一次提醒：-";
@@ -82,9 +81,9 @@ public sealed partial class MainWindow : Window
         LastActionText.Text = _reminderService.LastActionText ?? "最后动作：-";
     }
 
-    private void TestMessageNotificationButton_Click(object sender, RoutedEventArgs e)
+    private void StartBreakButton_Click(object sender, RoutedEventArgs e)
     {
-        _reminderService.TriggerMessageNotificationNow();
+        _reminderService.StartBreakNow();
     }
 
     private void ApplyIntervalButton_Click(object sender, RoutedEventArgs e)

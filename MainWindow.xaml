@@ -85,7 +85,7 @@
                         </Grid>
 
                         <StackPanel Orientation="Horizontal" Spacing="12">
-                            <Button Content="立刻触发" Click="TestMessageNotificationButton_Click" />
+                            <Button Content="开始休息" Click="StartBreakButton_Click" />
                             <Button Content="退出应用" Click="ExitButton_Click" />
                         </StackPanel>
 
@@ -98,7 +98,6 @@
                             <StackPanel Spacing="8">
                                 <TextBlock Text="状态" FontSize="16" FontWeight="SemiBold" />
                                 <TextBlock x:Name="IntervalText" Text="提醒间隔：-" TextWrapping="Wrap" />
-                                <TextBlock x:Name="StatusText" Text="尚未启动" TextWrapping="Wrap" />
                                 <TextBlock x:Name="NextReminderText" Text="下一次提醒：-" TextWrapping="Wrap" />
                                 <TextBlock x:Name="CurrentReminderText" Text="当前提醒：-" TextWrapping="Wrap" />
                                 <TextBlock x:Name="LastActionText" Text="最后动作：-" TextWrapping="Wrap" />

@@ -103,6 +103,11 @@ public sealed partial class RestReminderService : IDisposable
         RaiseStateChanged();
     }
 
+    public void StartBreakNow()
+    {
+        BeginBreak("最后动作：已手动开始休息，等待点击“我回来了”", true);
+    }
+
     private void HourlyTimer_Tick(DispatcherQueueTimer sender, object args)
     {
         _hourlyTimer.Stop();
@@ -305,6 +310,8 @@ public sealed partial class RestReminderService : IDisposable
         {
             _hourlyTimer.Stop();
         }
+
+        NextReminderAt = null;
 
         if (_reminderWindow is null)
         {
